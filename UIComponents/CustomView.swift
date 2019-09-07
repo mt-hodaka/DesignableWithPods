@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Material
+import Material
 
 @IBDesignable
 public class CustomView: UIView {
@@ -29,8 +29,8 @@ public class CustomView: UIView {
     private func commonInit() {
         backgroundColor = .blue
 
-        let button = UIButton.init(frame: .init(x: 0, y: 0, width: 88, height: 44))
-//        let button = FlatButton.init(frame: .init(x: 0, y: 0, width: 88, height: 44))
+//        let button = UIButton.init(frame: .init(x: 0, y: 0, width: 88, height: 44))
+        let button = FlatButton.init(frame: .init(x: 0, y: 0, width: 88, height: 44))
         button.backgroundColor = .red
         button.setTitle("button", for: .normal)
         addSubview(button)
