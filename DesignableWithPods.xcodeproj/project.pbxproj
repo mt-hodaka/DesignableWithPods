@@ -10,6 +10,7 @@
 		6A59DA6D2323828A001FFBB7 /* UIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A59DA6B2323828A001FFBB7 /* UIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A59DA702323828A001FFBB7 /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A59DA692323828A001FFBB7 /* UIComponents.framework */; };
 		6A59DA712323828A001FFBB7 /* UIComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A59DA692323828A001FFBB7 /* UIComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A59DA77232382BE001FFBB7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A59DA76232382BE001FFBB7 /* CustomView.swift */; };
 		6A658B772323812C008A2ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A658B762323812C008A2ADB /* AppDelegate.swift */; };
 		6A658B792323812C008A2ADB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A658B782323812C008A2ADB /* ViewController.swift */; };
 		6A658B7C2323812C008A2ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A658B7A2323812C008A2ADB /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		6A59DA692323828A001FFBB7 /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A59DA6B2323828A001FFBB7 /* UIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponents.h; sourceTree = "<group>"; };
 		6A59DA6C2323828A001FFBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A59DA76232382BE001FFBB7 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		6A658B732323812C008A2ADB /* DesignableWithPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignableWithPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A658B762323812C008A2ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A658B782323812C008A2ADB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		6A59DA6A2323828A001FFBB7 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				6A59DA76232382BE001FFBB7 /* CustomView.swift */,
 				6A59DA6B2323828A001FFBB7 /* UIComponents.h */,
 				6A59DA6C2323828A001FFBB7 /* Info.plist */,
 			);
@@ -176,6 +179,7 @@
 				TargetAttributes = {
 					6A59DA682323828A001FFBB7 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					6A658B722323812C008A2ADB = {
 						CreatedOnToolsVersion = 10.3;
@@ -226,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A59DA77232382BE001FFBB7 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +276,7 @@
 		6A59DA722323828A001FFBB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -289,6 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mt-hodaka.UIComponents";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -299,6 +306,7 @@
 		6A59DA732323828A001FFBB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -443,6 +451,7 @@
 		6A658B862323812E008A2ADB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NV8KK5CH4;
@@ -461,6 +470,7 @@
 		6A658B872323812E008A2ADB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NV8KK5CH4;
