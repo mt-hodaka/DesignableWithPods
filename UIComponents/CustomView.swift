@@ -29,10 +29,10 @@ public class CustomView: UIView {
     private func commonInit() {
         backgroundColor = .blue
 
-//        let button = UIButton.init(frame: .init(x: 0, y: 0, width: 88, height: 44))
-        let button = FlatButton.init(frame: .init(x: 0, y: 0, width: 88, height: 44))
-        button.backgroundColor = .red
-        button.setTitle("button", for: .normal)
+//        let button = UIButton(type: .infoLight)
+        let button = IconButton(image: Icon.cm.search, tintColor: .white)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
         addSubview(button)
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: centerXAnchor),
