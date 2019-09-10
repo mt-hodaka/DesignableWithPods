@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,10 @@
 		6A658B7E2323812E008A2ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A658B7D2323812E008A2ADB /* Assets.xcassets */; };
 		6A658B812323812E008A2ADB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A658B7F2323812E008A2ADB /* LaunchScreen.storyboard */; };
 		6A9C55644C6C5C6BEBC58CFF /* Pods_UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C958D707635A624E35A7357 /* Pods_UIComponents.framework */; };
+		A5B3A55E232764D4002DBB7F /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3A55C232764D4002DBB7F /* Material.framework */; };
+		A5B3A55F232764D4002DBB7F /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3A55D232764D4002DBB7F /* Motion.framework */; };
+		A5B3A5612327658D002DBB7F /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3A55C232764D4002DBB7F /* Material.framework */; };
+		A5B3A5622327658D002DBB7F /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3A55D232764D4002DBB7F /* Motion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,8 @@
 		6A658B802323812E008A2ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A658B822323812E008A2ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C958D707635A624E35A7357 /* Pods_UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B3A55C232764D4002DBB7F /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = "<group>"; };
+		A5B3A55D232764D4002DBB7F /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = "<group>"; };
 		BE6838C8201F90527BADC3A0 /* Pods-Abstracts-DesignableWithPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstracts-DesignableWithPods.debug.xcconfig"; path = "Target Support Files/Pods-Abstracts-DesignableWithPods/Pods-Abstracts-DesignableWithPods.debug.xcconfig"; sourceTree = "<group>"; };
 		C4605A2DF68E0F58FA17D318 /* Pods-UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-UIComponents/Pods-UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 		C67D4DA0F36ADBF3DB2E52AF /* Pods-Abstracts-UIComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstracts-UIComponents.release.xcconfig"; path = "Target Support Files/Pods-Abstracts-UIComponents/Pods-Abstracts-UIComponents.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B3A5612327658D002DBB7F /* Material.framework in Frameworks */,
+				A5B3A5622327658D002DBB7F /* Motion.framework in Frameworks */,
 				6A9C55644C6C5C6BEBC58CFF /* Pods_UIComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B3A55E232764D4002DBB7F /* Material.framework in Frameworks */,
+				A5B3A55F232764D4002DBB7F /* Motion.framework in Frameworks */,
 				6A59DA702323828A001FFBB7 /* UIComponents.framework in Frameworks */,
 				1A125F61150915450E7F7059 /* Pods_DesignableWithPods.framework in Frameworks */,
 			);
@@ -150,6 +160,8 @@
 		FD66BAA34473CD31C5C90DF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5B3A55C232764D4002DBB7F /* Material.framework */,
+				A5B3A55D232764D4002DBB7F /* Motion.framework */,
 				520FEE3D0BE5A22A82EDB762 /* Pods_DesignableWithPods.framework */,
 				9C958D707635A624E35A7357 /* Pods_UIComponents.framework */,
 			);
@@ -198,6 +210,7 @@
 				6A658B702323812C008A2ADB /* Frameworks */,
 				6A658B712323812C008A2ADB /* Resources */,
 				6A59DA752323828A001FFBB7 /* Embed Frameworks */,
+				A5B3A560232764DE002DBB7F /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,6 +325,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5B3A560232764DE002DBB7F /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Material.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Motion.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -375,6 +408,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = UIComponents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +443,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = UIComponents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -547,6 +588,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NV8KK5CH4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DesignableWithPods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,6 +612,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NV8KK5CH4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DesignableWithPods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
