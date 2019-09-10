@@ -191,6 +191,7 @@
 				6A59DA652323828A001FFBB7 /* Sources */,
 				6A59DA662323828A001FFBB7 /* Frameworks */,
 				6A59DA672323828A001FFBB7 /* Resources */,
+				A5B3A56323276593002DBB7F /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +345,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		A5B3A56323276593002DBB7F /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Material.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Motion.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ${TARGET_INTERFACE_BUILDER} = \"1\" ]; then\n    /usr/local/bin/carthage copy-frameworks\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
