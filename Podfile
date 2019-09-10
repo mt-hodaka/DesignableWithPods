@@ -6,7 +6,7 @@ target 'DesignableWithPods' do
   use_frameworks!
 
   # Pods for DesignableWithPods
-  pod 'Material'
+  # pod 'Material'
 end
 
 target 'UIComponents' do
@@ -14,5 +14,5 @@ target 'UIComponents' do
   use_frameworks!
 
   # Pods for UIComponents
-  pod 'Material'
+  # pod 'Material'
 end
